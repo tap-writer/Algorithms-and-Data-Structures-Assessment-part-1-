@@ -16,12 +16,28 @@ namespace CampusParcelAssessment
 
         public BSTree()
         {
-            throw new NotImplementedException();
+            root = null;
         }
 
         public void InsertItem(T item)
         {
-            throw new NotImplementedException();
+            insertItem(item, ref root);
+        }
+
+        private void insertItem(T item, ref Node<T> tree)
+        {
+            if (tree == null)
+            {
+                tree = new Node<T>(item);
+            }
+            else if (item.CompareTo(tree.Data)<0)
+            {
+                insertItem(item, ref tree.Left);
+            }
+            else if (item.CompareTo(tree.Data)>0)   
+            {
+                insertItem(item, ref tree.Right);
+            }
         }
 
         public int Height()

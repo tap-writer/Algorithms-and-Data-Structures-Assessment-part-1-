@@ -42,7 +42,9 @@ namespace CampusParcelAssessment
         // Task A: compare TrackingId values without regard to letter case.
         public int CompareTo(object obj)
         {
-            throw new NotImplementedException("Task A: implement Parcel.CompareTo.");
+            String temp = trackingId.ToLower();
+            String temp2 = ((Parcel)obj).TrackingId.ToLower();
+            return temp.CompareTo(temp2);
         }
 
         public override string ToString()

@@ -10,15 +10,16 @@ namespace CampusParcelAssessment
 
     class BinTree<T> where T : IComparable
     {
+        protected Node<T> root;
 
         public BinTree()
         {
-            throw new NotImplementedException();
+            root = null;
         }
 
         public BinTree(Node<T> node)
         {
-            throw new NotImplementedException();
+            root = node;
         }
 
 
