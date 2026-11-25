@@ -38,6 +38,10 @@ namespace CampusParcelAssessment
             {
                 insertItem(item, ref tree.Right);
             }
+            else if (item.CompareTo(tree.Data)==0)
+            {
+                Console.WriteLine("duplicate tracking id has been entered");
+            }
         }
 
         public int Height()
